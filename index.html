@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <button>Загадать число</button>
+    
+        <div id="started" hidden>
+            <h2>Я загадал число от 1 до 100</h2>
+            <h3>Попробуй отгадай</h3>
+    
+            <form id="form">
+                <input type="number" name="guess" min="1" max="100">
+                <button hidden></button>
+    
+                <div class="buttons">
+                    <script>
+                        let html = ""
+                        for (let i = 1; i <= 100; i++) html += `<button value="${i}">${i}</button>`
+                        document.write(html)
+                        document.currentScript.remove()
+                    </script>
+                </div>
+                <output name="response">Загаданное число больше</output>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
